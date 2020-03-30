@@ -1,0 +1,7 @@
+
+### Post list
+GET http://127.0.0.1:8000/api/v1/post/ HTTP/1.1
+
+
+### User list
+GET http://127.0.0.1:8000/api/v1/user/ HTTP/1.1
