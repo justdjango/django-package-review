@@ -1,0 +1,18 @@
+{% load honeypot %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <h4>Spam contact form</h4>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        {% render_honeypot_field "email" %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

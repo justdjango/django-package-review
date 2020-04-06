@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'admin_honeypot',
+    'honeypot'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,7 @@ ROOT_URLCONF = 'packagereview.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
